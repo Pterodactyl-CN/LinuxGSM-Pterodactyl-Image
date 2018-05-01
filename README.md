@@ -6,13 +6,13 @@
 
 # LinuxGSM Docker
 
-This docker image is under development and not officialy supported.
+这个 docker 映像仍处于开发阶段，并没有官方支持
 
-The developers of LinuxGSM are not currently docker experts. So if there is some interested in becoming a LinuxGSM docker developer please contact us.
+这些LinuxGSM的开发者们并不完全是 docker 的专家，若您有兴趣成为我们 LinuxGSM docker 的开发者，请联系我们
 
-A docker container distribution of https://github.com/GameServerManagers/LinuxGSM
+Docker容器部署于 https://github.com/GameServerManagers/LinuxGSM
 
 Dockerhub https://hub.docker.com/r/gameservermanagers/linuxgsm-docker/
 
-Run Game Servers in Docker, multiplex multiple LinuxGSM deployments easily by taking advantage of Dockers port mapping.
+在Docker中运行游戏服务器，利用Docker的端口映射轻松地部署多个LinuxGSM
 
