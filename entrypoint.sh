@@ -11,7 +11,7 @@
 ## then we must keep a backup copy of the script on local drive
 if [ ! -e ~/linuxgsm.sh ]; then
     echo "Initializing Linuxgsm User Script in New Volume"
-    cp /linuxgsm.sh ./linuxgsm.sh
+    cp /linuxgsm.sh /home/container/linuxgsm.sh
 fi
 
 # with no command, just spawn a running container suitable for exec's
