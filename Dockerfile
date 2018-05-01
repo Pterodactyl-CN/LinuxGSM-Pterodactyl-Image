@@ -70,7 +70,7 @@ RUN adduser --disabled-password --gecos "" container && \
 
 USER container
 WORKDIR /home/container
-RUN cp /linuxgsm.sh /home/container/linuxgsm.sh
+RUN wget -O /home/container/linuxgsm.sh https://linuxgsm.com/dl/linuxgsm.sh
 
 # need use xterm for LinuxGSM
 ENV TERM=xterm
