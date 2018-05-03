@@ -3,6 +3,7 @@
 ## execute LinuxGSM or arbitrary server commands at will
 ## by passing command
 
+cd /home/container
 
 ## Because of a limitation in LinuxGSM script it must be run from the directory
 ## It is installed in.
@@ -30,5 +31,14 @@ else
     # but requires -it or at least -t
     tmux set -g status off && tmux attach 2> /dev/null
 fi
+
+# Make internal Docker IP address available to processes.
+export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
+
+MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
+echo ":/home/container$ ${MODIFIED_STARTUP}"
+
+# Run the Server
+eval ${MODIFIED_STARTUP}
 
 exit 0
