@@ -65,10 +65,10 @@ RUN adduser --disabled-password -D -h /home/container container
 
 ## user config
 #RUN adduser --disabled-password --gecos "" container && \
-	chown container:container /linuxgsm.sh && \
-	chmod +x /linuxgsm.sh && \
-	cp /linuxgsm.sh /home/container/linuxgsm.sh && \
-	usermod -G tty container
+#	chown container:container /linuxgsm.sh && \
+#	chmod +x /linuxgsm.sh && \
+#	cp /linuxgsm.sh /home/container/linuxgsm.sh && \
+#	usermod -G tty container
 
 USER container
 ENV  USER container
