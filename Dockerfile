@@ -61,7 +61,7 @@ RUN dpkg --add-architecture i386 && \
 ## lgsm.sh
 #RUN wget https://linuxgsm.com/dl/linuxgsm.sh
 
-adduser --disabled-password -D -h /home/container container
+RUN adduser --disabled-password -D -h /home/container container
 
 ## user config
 #RUN adduser --disabled-password --gecos "" container && \
