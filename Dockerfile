@@ -59,26 +59,14 @@ RUN dpkg --add-architecture i386 && \
 		libnm-glib-dev:i386
 
 ## lgsm.sh
-#RUN wget https://linuxgsm.com/dl/linuxgsm.sh
-
-RUN adduser --disabled-password -D -h /home/container container
-
-## user config
-#RUN adduser --disabled-password --gecos "" container && \
-#	chown container:container /linuxgsm.sh && \
-#	chmod +x /linuxgsm.sh && \
-#	cp /linuxgsm.sh /home/container/linuxgsm.sh && \
-#	usermod -G tty container
+RUN wget -O /usr/bin/lgsm https://linuxgsm.com/dl/linuxgsm.sh
 
 USER container
 ENV  USER container
 ENV  HOME /home/container
 
-# need use xterm for LinuxGSM
-ENV TERM=xterm
-
-## Docker Details
-ENV PATH=$PATH:/home/container
+WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
+
 CMD ["/bin/bash", "/entrypoint.sh"]
