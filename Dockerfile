@@ -57,7 +57,6 @@ RUN dpkg --add-architecture i386 && \
 		libgtk2.0-0:i386 \
 		libdbus-glib-1-2:i386 \
 		libnm-glib-dev:i386  \
-		sudo \
 #RUN apt-get clean		
 
 ## lgsm.sh
