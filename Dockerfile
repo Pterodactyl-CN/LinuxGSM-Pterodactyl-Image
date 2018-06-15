@@ -61,7 +61,7 @@ RUN dpkg --add-architecture i386 && \
 #RUN apt-get clean		
 
 ## lgsm.sh
-RUN wget -O /usr/bin/init-shell-cn https://linuxgsm.com/dl/linuxgsm.sh
+RUN wget -O /usr/bin/init-shell-cn https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh
 RUN chmod +x /usr/bin/init-shell-cn
 
 ## Setting user env
