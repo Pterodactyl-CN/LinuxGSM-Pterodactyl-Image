@@ -58,7 +58,7 @@ RUN dpkg --add-architecture i386 && \
 		libdbus-glib-1-2:i386 \
 		libnm-glib-dev:i386  \
 		sudo \
-RUN apt-get clean		
+#RUN apt-get clean		
 
 ## lgsm.sh
 RUN wget -O /usr/bin/cnlgsm https://linuxgsm.com/dl/linuxgsm.sh
