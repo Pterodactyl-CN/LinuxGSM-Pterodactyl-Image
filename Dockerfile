@@ -60,7 +60,7 @@ RUN dpkg --add-architecture i386 && \
 RUN apt-get clean		
 
 ## lgsm.sh
-RUN wget -O /usr/bin/lgsm https://linuxgsm.com/dl/linuxgsm.sh
+RUN wget -O /usr/bin/cnlgsm https://linuxgsm.com/dl/linuxgsm.sh
 
 ## Setting user env
 RUN useradd -d /home/container -m -s /bin/bash container
