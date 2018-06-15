@@ -63,7 +63,7 @@ RUN apt-get clean
 RUN wget -O /usr/bin/lgsm https://linuxgsm.com/dl/linuxgsm.sh
 
 ## Setting user env
-RUN adduser -D -h /home/container container
+RUN useradd -d /home/container -m -s /bin/bash container
 
 USER container
 ENV  USER container
