@@ -56,14 +56,16 @@ RUN dpkg --add-architecture i386 && \
 		libssl1.0.0:i386 \
 		libgtk2.0-0:i386 \
 		libdbus-glib-1-2:i386 \
-		libnm-glib-dev:i386
+		libnm-glib-dev:i386  \
+		sudo \
 RUN apt-get clean		
 
 ## lgsm.sh
 RUN wget -O /usr/bin/cnlgsm https://linuxgsm.com/dl/linuxgsm.sh
 
 ## Setting user env
-RUN useradd -d /home/container -m -s /bin/bash container
+#RUN useradd --disabled-password -d /home/container -m -s /bin/bash container
+RUN adduser --disabled-password  --gecos "" container
 
 USER container
 ENV  USER container
