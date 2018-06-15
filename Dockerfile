@@ -61,8 +61,8 @@ RUN dpkg --add-architecture i386 && \
 #RUN apt-get clean		
 
 ## lgsm.sh
-RUN wget -O /usr/bin/cnlgsm https://linuxgsm.com/dl/linuxgsm.sh
-RUN chmod +x /usr/bin/cnlgsm
+RUN wget -O /usr/bin/init-shell-cn https://linuxgsm.com/dl/linuxgsm.sh
+RUN chmod +x /usr/bin/init-shell-cn
 
 ## Setting user env
 #RUN useradd --disabled-password -d /home/container -m -s /bin/bash container
