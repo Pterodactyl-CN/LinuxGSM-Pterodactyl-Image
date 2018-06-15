@@ -5,7 +5,7 @@
 #
 
 FROM ubuntu:16.04
-LABEL maintainer="LinuxGSM <me@Danielgibbs.co.uk>"
+LABEL maintainer="LinuxGSM-Pter-CN <xjdzch@126.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -57,9 +57,13 @@ RUN dpkg --add-architecture i386 && \
 		libgtk2.0-0:i386 \
 		libdbus-glib-1-2:i386 \
 		libnm-glib-dev:i386
+RUN apt-get clean		
 
 ## lgsm.sh
 RUN wget -O /usr/bin/lgsm https://linuxgsm.com/dl/linuxgsm.sh
+
+## Setting user env
+RUN adduser -D -h /home/container container
 
 USER container
 ENV  USER container
