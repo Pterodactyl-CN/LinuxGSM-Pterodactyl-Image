@@ -17,7 +17,8 @@ RUN apt-get clean
 RUN echo "username ALL=(ALL) NOPASSWD: ALL"    >> /etc/sudoers
 RUN wget -O /usr/bin/lgsmcore https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh
 RUN chmod +x /usr/bin/lgsmcore
-RUN adduser --disabled-password  --gecos "" container
+RUN adduser   --gecos "" container
+RUN echo lgsmcore | passwd container --stdin
 
 USER container
 ENV  USER container
