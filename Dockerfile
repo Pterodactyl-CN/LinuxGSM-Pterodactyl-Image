@@ -15,8 +15,8 @@ RUN  apt update -y
 RUN  apt -y install mailutils postfix curl wget file bzip2 gzip unzip bsdmainutils python util-linux ca-certificates binutils bc tmux lib32gcc1 libstdc++6 libstdc++6:i386 lib32tinfo5 sudo		
 RUN apt-get clean		
 RUN echo "container ALL=(ALL) NOPASSWD: ALL"    >> /etc/sudoers
-RUN wget -O /usr/bin/lgsmcore https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh
-RUN chmod +x /usr/bin/lgsmcore
+RUN wget -O /usr/bin/lgsmcore https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh >> /dev/null
+RUN chmod +x /usr/bin/lgsmcore /dev/null
 RUN adduser   --gecos "" container
 #RUN exec &&  echo 'lgsmcore' | passwd container --stdin >> /dev/null
 
