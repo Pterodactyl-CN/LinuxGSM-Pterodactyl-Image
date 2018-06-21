@@ -17,7 +17,7 @@ RUN apt-get clean
 RUN echo "container ALL=(ALL) NOPASSWD: ALL"    >> /etc/sudoers
 RUN wget -O /usr/bin/lgsmcore https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh >> /dev/null
 RUN chmod +x /usr/bin/lgsmcore /dev/null
-RUN adduser   --gecos "" container
+RUN adduser  -u 993 --gecos "" container
 #RUN exec &&  echo 'lgsmcore' | passwd container --stdin >> /dev/null
 
 USER container
