@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list
 RUN  dpkg --add-architecture i386
 RUN  apt update -y 
-RUN  apt -y install mailutils postfix curl wget file bzip2 gzip unzip libcurl4-openssl-dev libcurl4-gnutls-dev bsdmainutils python util-linux ca-certificates binutils bc tmux lib32gcc1 libstdc++6 libstdc++6:i386 lib32tinfo5 lib32z1 sudo		
+RUN  apt -y install mailutils postfix curl wget file bzip2 gzip unzip libcurl4-openssl-dev bsdmainutils python util-linux ca-certificates binutils bc tmux lib32gcc1 libstdc++6 libstdc++6:i386 lib32tinfo5 lib32z1 sudo		
 RUN apt-get clean		
 RUN echo "container ALL=(ALL) NOPASSWD: ALL"    >> /etc/sudoers
 RUN wget -O /usr/bin/lgsmcore https://raw.githubusercontent.com/GameServerManagers/LinuxGSM/master/linuxgsm.sh >> /dev/null
