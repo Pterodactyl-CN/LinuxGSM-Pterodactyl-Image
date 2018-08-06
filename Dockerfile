@@ -4,7 +4,7 @@
 # https://github.com/GameServerManagers/LinuxGSM-Docker
 #
 
-FROM ubuntu:16.04
+FROM ubuntu:18.10
 LABEL maintainer="LinuxGSM-Pter-CN <xjdzch@126.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
